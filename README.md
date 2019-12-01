@@ -9,4 +9,4 @@ blurredres.png <-- image convoluted with IBM protocol
 
 imgnew.txt <-- txt with the original grayscale of Immagine.png bits 0-255
 
-myfile.txt <-- txt with the grayscale of blurredres.png 0-255
+myfile.txt <-- txt with the grayscale of blurredres.png bits 0-255
