@@ -14,7 +14,7 @@ ap_int<24> temp_h=0;
 pixel res=0;
 
 
-// convoluzione verticale : 1° prodotto
+// convoluzione verticale : 1Â° prodotto
 
 for(int i = 0; i < N; i++)
 	{
