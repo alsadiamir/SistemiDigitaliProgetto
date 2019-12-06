@@ -1,6 +1,29 @@
 #include "test_func.h"
 #include "ap_int.h"
 
+//static int rnd_seed;
+//
+//void set_pseudo_random (int new_seed)
+//{
+//    rnd_seed = new_seed;
+//}
+//
+//int pseudo_random ()
+//{
+//    unsigned int hi,lo;
+//
+//    hi = 16807 * (rnd_seed >> 16);
+//    lo = 16807 * (rnd_seed & 0xFFFF);
+//    lo += (hi & 0x7FFF) << 16;
+//    lo += hi >> 15;
+//    if (lo > 2147483647)
+//        lo -= 2147483647;
+//    rnd_seed = lo;
+//    return rnd_seed;
+//}
+
+
+
 unsigned int pseudo_random(unsigned int seed, int load) {
   static ap_uint<32> lfsr;
 

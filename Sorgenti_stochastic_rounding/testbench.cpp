@@ -1,5 +1,7 @@
 
 #include "stochastic_rounding_module.h"
+#include "test_func.h"
+#include "convert_library.h"
 #include <fstream>
 #include <iostream>
 #include <stdio.h>
@@ -23,33 +25,33 @@ int main(){
 
 	type *DATA_IN   = (type*)malloc(sizeof(type)*HEIGHT_IMG*WIDTH_IMG);
 
-//	for(long j=0;j<4*HEIGHT_IMG*WIDTH_IMG;j++)
-//		DATA_IN[j]=0;
+	ap_uint<7> RANDOM_ARRAY[HEIGHT_IMG*WIDTH_IMG];
+
+	typematrix MATRIX_CONVERTED[K_H][K_W];
+
+	for(int i=0;i<K_H;i++)
+		for(int j=0;j<K_W;j++){
+			float conv = M[i][j]/divF1;
+			compute_signed(conv,"MATRIX", &MATRIX_CONVERTED[i][j]);
+		}
+
+
+	for(int i=0;i<K_H;i++)
+			for(int j=0;j<K_W;j++)
+				printf("MATRIX[%d,%d]: %d\n",i,j,MATRIX_CONVERTED[i][j].to_uint());
+
 
     for(long j=0;j<HEIGHT_IMG*WIDTH_IMG;j++){
-//    	unsigned long temp = 0;
-//
-//    	unsigned int firstbyte;
-//    	unsigned int secondbyte;
-//    	unsigned int thirdbyte;
-//    	unsigned int fourthbyte;
-//
-//    	inFile >> firstbyte;
-//    	inFile >> secondbyte;
-//    	inFile >> thirdbyte;
-//    	inFile >> fourthbyte;
-//
-//    	temp = ((unsigned long)firstbyte) << 24;
-//    	temp += ((unsigned long)secondbyte) << 16;
-//    	temp += ((unsigned long)thirdbyte) << 8;
-//    	temp += ((unsigned long)fourthbyte);
 
+    	RANDOM_ARRAY[j]=RandInt(1,100);
 
     	inFile>>DATA_IN[j];
     }
 
     type *DATA_OUT   = (type*)malloc(sizeof(type)*HEIGHT_IMG*WIDTH_IMG);
 
+    set_random_array(RANDOM_ARRAY);
+    set_matrix_converted_final(MATRIX_CONVERTED);
 
     cout<<"++++++++++++++++++++++++++++++++++++++OUT: \n\n\n\n\n";
 

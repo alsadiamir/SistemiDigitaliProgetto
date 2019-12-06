@@ -1,8 +1,8 @@
 #include "convert_library.h"
-//#include "ap_int.h"
+#include <stdio.h>
 #include "stochastic_rounding_module.h"
 
-type compute32(typemult in){
+void compute32(typemult in, type *out){
 	#pragma HLS INLINE
 
 	printf("IN: %d\n",in.to_int());
@@ -21,10 +21,10 @@ type compute32(typemult in){
 
 	printf("Uscita: %d\n",pixel.to_uint());
 
-	return pixel;
+	*out=pixel;
 }
 
-type convert_and_compute_32(typemult in){
+void convert_and_compute_32(typemult in, type *out, ap_uint<7> rand){
 
 	#pragma HLS INLINE
 
@@ -50,10 +50,13 @@ type convert_and_compute_32(typemult in){
 
 			int p= (int)((1 - (pixelin-zstoc)/err)*100);
 
-			float out=zstoc;
+			pixelin=zstoc;
 
-			if(RandInt(1,100)>p)
+			if(rand>p)
 				pixelin+=err;
+
+//			if(pixelin-zstoc < err/2) pixelin=zstoc;
+//			else pixelin=zstoc+err;
 		}
 
 	printf("pixel dopo gli if: %f\n", pixelin);
@@ -66,10 +69,10 @@ type convert_and_compute_32(typemult in){
 
 	printf("Uscita: %d\n",pixel.to_uint());
 
-	return pixel;
+	*out=pixel;
 }
 
-typematrix convert_signed(float out, char *ID){
+void convert_signed(float out, char *ID, typematrix *matrixpixel){
 
 	if(out<min){
 		out = min;
@@ -85,12 +88,12 @@ typematrix convert_signed(float out, char *ID){
 
 	//printf("Dopo conversione, dato di %s = %f\n", ID,(((float)pixelout)/(pow(2,16)-1)));
 
-	return pixelout;
+	*matrixpixel=pixelout;
 }
 
-typematrix compute_signed(float pixelin, char *ID){
+void compute_signed(float pixelin, char *ID, typematrix *matrixpixel){
 
-//	#pragma HLS INLINE
+	#pragma HLS INLINE
 
 	int N = (int)(pixelin/err);
 
@@ -105,7 +108,7 @@ typematrix compute_signed(float pixelin, char *ID){
 
 	//printf("Prima di conversione, dato di %s = %f\n",ID,out);
 
-	return convert_signed(out,ID);
+	convert_signed(out,ID,matrixpixel);
 }
 
 //unsigned int convert_unsigned(float out, char *ID){
