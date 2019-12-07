@@ -17,25 +17,20 @@ y = np.asarray(img_conv)
 x.astype(np.uint8)
 y.astype(np.uint8)
 
-out = np.full((307200), 0)
+out = np.full((480,640), 0)
 out.astype(np.uint8)
 
 for i in range(0,480):
     for j in range(0,640):
-    
-        if(x[i][j] == y[i][j]):
-            out[i] = 0
-        else: 
-            out[i] = 255
+        if(int(x[i][j]) != int(y[i][j])):
+            out[i][j] = 255
         
-data = np.array(out).reshape((480,640))
+#data = np.array(out).reshape((480,640))
 
-print(data)
-
-
+print(out)
 
 # Convert to image and save
-img = Image.fromarray(data, 'L')
+img = Image.fromarray(out)
 
 img.show()
         
