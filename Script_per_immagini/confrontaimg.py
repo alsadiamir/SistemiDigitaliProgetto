@@ -12,20 +12,21 @@ img_conv=cv2.imread("D:/blurredres.png")
 img_original= cv2.cvtColor(img_original, cv2.COLOR_BGR2GRAY)
 img_conv=cv2.cvtColor(img_conv, cv2.COLOR_BGR2GRAY)
 
-x = np.asarray(img_original).flatten()
-y = np.asarray(img_conv).flatten()
+x = np.asarray(img_original)
+y = np.asarray(img_conv)
+x.astype(np.uint8)
+y.astype(np.uint8)
 
 out = np.full((307200), 0)
 out.astype(np.uint8)
 
-for i in range(0,out.size):
-    #print(x[i])
-    #print(y[i])
+for i in range(0,480):
+    for j in range(0,640):
     
-    if(x[i] == y[i]):
-        out[i] = 0
-    else: 
-        out[i] = 255
+        if(x[i][j] == y[i][j]):
+            out[i] = 0
+        else: 
+            out[i] = 255
         
 data = np.array(out).reshape((480,640))
 
