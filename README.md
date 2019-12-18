@@ -1,1 +1,12 @@
-[embed]https://github.com/alsadiamir/SistemiDigitaliProgetto/blob/master/Relazione_Presentazione/RelazioneSistemiDigitaliM.pdf[/embed]
+https://github.com/alsadiamir/SistemiDigitaliProgetto/blob/master/Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-01.png
+https://github.com/alsadiamir/SistemiDigitaliProgetto/blob/master/Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-02.png
+https://github.com/alsadiamir/SistemiDigitaliProgetto/blob/master/Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-03.png
+https://github.com/alsadiamir/SistemiDigitaliProgetto/blob/master/Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-04.png
+https://github.com/alsadiamir/SistemiDigitaliProgetto/blob/master/Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-05.png
+https://github.com/alsadiamir/SistemiDigitaliProgetto/blob/master/Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-06.png
+https://github.com/alsadiamir/SistemiDigitaliProgetto/blob/master/Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-07.png
+https://github.com/alsadiamir/SistemiDigitaliProgetto/blob/master/Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-08.png
+https://github.com/alsadiamir/SistemiDigitaliProgetto/blob/master/Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-09.png
+https://github.com/alsadiamir/SistemiDigitaliProgetto/blob/master/Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-10.png
+https://github.com/alsadiamir/SistemiDigitaliProgetto/blob/master/Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-11.png
+https://github.com/alsadiamir/SistemiDigitaliProgetto/blob/master/Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-12.png
