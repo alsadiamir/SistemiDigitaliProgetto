@@ -1,12 +1,1 @@
-Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-01.png
-Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-02.png
-Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-03.png
-Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-04.png
-Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-05.png
-Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-06.png
-Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-07.png
-Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-08.png
-Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-09.png
-Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-10.png
-Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-11.png
-Relazione_Presentazione/Relazione_PNG/RelazioneSistemiDigitaliM-12.png
+This repo is designed for our final project on Sistemi Digitali M, a class in Computer Engineering, Unibo, Bologna, Italy. Developers: Amir Al Sadi, Nicolò Saccone.
